@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script defer src="/src/index.js" type="module"></script>
+
+    <title>Podcast App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">PodcastApp</h1>
+    </header>
+
+    <section class="filters">
+      <label>Filter by:</label>
+
+      <select id="genre-filter">
+        <option>All Genres</option>
+      </select>
+
+      <select id="sort-filter">
+        <option>Recently Updated</option>
+      </select>
+    </section>
+
+    <main>
+      <section id="podcastGrid" class="podcast-grid"></section>
+    </main>
+
+    <dialog id="modalOverlay" class="modal-overlay">
+      <div class="modal">
+        <button id="closeModal" class="modal-close">&times;</button>
+
+        <div id="modalContent"></div>
+      </div>
+    </dialog>
+  </body>
+</html>
