@@ -154,6 +154,7 @@ body {
 .podcast-card-updated {
   color: #6b7280;
   font-size: 0.95rem;
+  margin-top: 1rem;
 }
 
 .modal-overlay {
@@ -247,8 +248,8 @@ body {
 
 .genre-tag {
   background-color: #f3f4f6;
-  border-radius: 999px;
-  padding: 0.5rem 0.9rem;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
   font-size: 0.9rem;
 }
 
@@ -268,6 +269,7 @@ body {
   border: 1px solid #e5e7eb;
   border-radius: 0.75rem;
   background-color: white;
+  cursor: pointer;
 }
 
 .season-list span {
