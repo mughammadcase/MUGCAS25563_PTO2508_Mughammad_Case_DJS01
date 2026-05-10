@@ -1,69 +1,90 @@
-# DJS01: Vanilla JS Podcast App
+# Podcast App
 
-## Overview
+A responsive podcast browsing application built with vanilla JavaScript, HTML, and CSS.
 
-You will design and build a responsive web application that allows users to **browse podcast shows** on a landing page and **view detailed information** in a modal. The application should display clear, concise previews of podcast shows and offer additional information through a modal pop-up, **all without navigating away from the page**. Your app should showcase clean code architecture and strong UI/UX design while following JavaScript best practices.
+## Features
 
----
+- Browse podcast shows on the landing page
+- View podcast cover image, title, genres, seasons, and updated dates
+- Open podcast details in a responsive modal
+- Responsive design for mobile and desktop
+- Modular JavaScript architecture
+- Reusable utility and service modules
+- JSDoc documented functions and modules
 
-## Core Objectives
+## Technologies Used
 
-### 1. Landing Page – Podcast Previews
+- HTML5
+- CSS3
+- Vanilla JavaScript (ES Modules)
 
-- Display a list of podcast shows on the landing page.
-- Each podcast preview must include:
-  - Cover image
-  - Show title
-  - Number of seasons
-  - Genre names
-  - Last updated date (in a human-readable format)
+## Project Structure
 
-### 2. Modal View – Show Details
+```bash
+src/
+│
+├── components/
+│   ├── createModal.js
+│   └── createPodcastCard.js
+│
+├── utils/
+│   ├── createElement.js
+│   ├── dateUtils.js
+│   └── genreService.js
+│
+├── views/
+│   └── createGrid.js
+│
+├── data.js
+└── index.js
+```
 
-- When a user clicks on a podcast preview, open a modal.
-- The modal should include:
-  - Larger cover image
-  - Podcast title
-  - Description of the show
-  - Genre tags
-  - Last updated date (readable format)
-  - List of season titles
-  - Number of episodes in each season
-- Include a clear and accessible way to **close the modal**.
+## JavaScript Principles Applied
 
-### 3. Code Architecture & Best Practices
+### Object-Oriented Programming
 
-- Use **object-oriented programming (OOP)** where appropriate.
-- Apply **functional programming principles** to ensure modularity and predictability.
-- Follow **SOLID design principles** for clean, maintainable code.
-- Abstract repeated logic into **reusable functions or classes**.
-- Add **JSDoc comments** for major functions and modules.
+- Encapsulated modal functionality
+- Modular component architecture
 
----
+### Functional Programming
 
-## Technical Requirements
+- Array methods such as:
+  - `map()`
+  - `find()`
+  - `join()`
 
-- Use **HTML, CSS (or Tailwind), and JavaScript**.
-- No page reloads: Use JavaScript to handle modal behaviour and data rendering.
-- Ensure all UI states (modal open/close, hover effects, etc.) work smoothly.
-- Ensure all data is displayed in a **readable and accessible format**.
+### SOLID Principles
 
----
+- Single Responsibility Principle applied across modules
+- Separation of concerns between rendering, utilities, and data handling
 
-## Design & UX Goals
+## Responsive Design
 
-- Visually appealing UI with clear layout and hierarchy.
-- Use a consistent **colour scheme, typography, spacing, and sizing**.
-- Accessibility considerations (contrast, font readability, responsive buttons).
-- App should be fully **responsive** on desktop, tablet, and mobile.
+The application is fully responsive across:
 
-Make sure to dive into the wireframe reference images folder for guidance on how to build the UI structure. Note that the UI wireframes for both Desktop and Mobile are included.  
+- Mobile devices
+- Desktop screens
 
-![alt text](<wireframe reference images/desktop view/desktop_modal_view.png>)
+Media queries and flexible grid layouts are used to ensure a consistent user experience.
 
----
+## Getting Started
 
-## Deliverables
+1. Clone the repository
 
-- A fully functional, responsive podcast preview web application.
-- Clean, well-commented source code (HTML, CSS, JS).
+```bash
+git clone https://github.com/mughammadcase/MUGCAS25563_PTO2508_Mughammad_Case_DJS01.git
+```
+
+2. Open the project folder
+
+```bash
+cd MUGCAS25563_PTO2508_Mughammad_Case_DJS01
+```
+
+3. Run the project
+
+Open with `Live Server` by right clicking the index.html file
+
+## Author
+
+Mughammad Case
