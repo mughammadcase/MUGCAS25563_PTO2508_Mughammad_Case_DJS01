@@ -20,9 +20,10 @@ export const createModal = {
     const seasonsHTML = seasonData.seasonDetails
       .map(
         (season) => `
-        <li>
-          <strong>${season.title}</strong> - ${season.episodes} episodes
-        </li>
+      <li>
+        <strong>${season.title}</strong>
+        <span>${season.episodes} episodes</span>
+      </li>
       `,
       )
       .join("");
