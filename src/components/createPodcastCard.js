@@ -1,5 +1,6 @@
 import { GenreService } from "../utils/genreService.js";
 import { DateUtils } from "../utils/dateUtils.js";
+import { createElement } from "../utils/createElement.js";
 
 /**
  * Creates a podcast card element.
@@ -13,16 +14,19 @@ export function createPodcastCard(podcast) {
   const genreNames = GenreService.getNames(podcast.genres).join(", ");
   const updatedDate = DateUtils.format(podcast.updated);
 
-  card.innerHTML = `
-    <img src="${podcast.image}" alt="${podcast.title}">
+  const image = document.createElement("img");
+  image.src = podcast.image;
+  image.alt = podcast.title;
 
-    <div class="podcast-card-content">
-      <h2>${podcast.title}</h2>
-      <p>${genreNames}</p>
-      <p>${podcast.seasons} seasons</p>
-      <p>${updatedDate}</p>
-    </div>
-  `;
+  const content = createElement("div", "podcast-card-content");
+  const title = createElement("h2", "", podcast.title);
+  const genres = createElement("p", "", genreNames);
+  const seasons = createElement("p", "", `${podcast.seasons} seasons`);
+  const updated = createElement("p", "", updatedDate);
+
+  content.append(title, genres, seasons, updated);
+
+  card.append(image, content);
 
   return card;
 }
