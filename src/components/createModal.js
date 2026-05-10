@@ -6,7 +6,10 @@ import { DateUtils } from "../utils/dateUtils.js";
  * Controls the podcast modal.
  */
 export const createModal = {
-  // Opens the modal with podcast details
+  /**
+   * Opens the modal with podcast details.
+   * @param {Object} podcast Podcast data object
+   */
   open(podcast) {
     const modalOverlay = document.getElementById("modalOverlay");
     const modalContent = document.getElementById("modalContent");
@@ -14,19 +17,7 @@ export const createModal = {
     // Finds the season data for matching podcast ID
     const seasonData = seasons.find((season) => season.id === podcast.id);
 
-    const genreNames = GenreService.getNames(podcast.genres).join(", ");
     const updatedDate = DateUtils.format(podcast.updated);
-
-    const seasonsHTML = seasonData.seasonDetails
-      .map(
-        (season) => `
-      <li>
-        <strong>${season.title}</strong>
-        <span>${season.episodes} episodes</span>
-      </li>
-      `,
-      )
-      .join("");
 
     modalContent.innerHTML = `
   <h2 class="modal-title">${podcast.title}</h2>

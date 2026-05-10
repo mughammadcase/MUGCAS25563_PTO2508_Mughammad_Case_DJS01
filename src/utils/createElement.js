@@ -1,5 +1,5 @@
 /**
- * Creates a DOM element.
+ * Creates HTML element with specified tag, class and text conten
  *
  * @param {string} tag - The HTML tag to create (e.g., 'div', 'p').
  * @param {string} className - The CSS class name for the element.
