@@ -1,3 +1,21 @@
+:root {
+  --color-background: #f4f4f4;
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+  --color-border-dark: #aeaeae;
+  --color-text: #333333;
+  --color-text-muted: #4b5563;
+  --color-text-light: #6b7280;
+  --color-tag: #f3f4f6;
+  --color-overlay: rgba(0, 0, 0, 0.45);
+
+  --font-family-base: Arial, sans-serif;
+
+  --radius-sm: 0.4rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +23,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 /* Header Styles */
@@ -17,8 +35,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header-logo {
@@ -80,11 +98,11 @@ body {
 
 .filters select {
   padding: 0.8rem 0.5rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.75rem;
-  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
   font-size: 1rem;
-  color: #282828;
+  color: var(--color-text);
   cursor: pointer;
 }
 
@@ -118,9 +136,9 @@ body {
 }
 
 .podcast-card {
-  background-color: white;
-  border: 1px solid #aeaeae;
-  border-radius: 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
 }
@@ -147,12 +165,12 @@ body {
 }
 
 .podcast-card-seasons {
-  color: #6b7280;
+  color: var(--color-text);
   font-size: 1rem;
 }
 
 .podcast-card-updated {
-  color: #6b7280;
+  color: var(--color-text);
   font-size: 0.95rem;
   margin-top: 1rem;
 }
@@ -163,13 +181,13 @@ body {
   height: 100vh;
   border: none;
   padding: 2rem 1rem;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: var(--color-overlay);
 }
 
 .modal {
   position: relative;
-  background-color: white;
-  border-radius: 0.75rem;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
   max-width: 950px;
   width: 100%;
   margin: auto;
@@ -183,7 +201,7 @@ body {
   border: none;
   background: none;
   font-size: 2.25rem;
-  color: #6b7280;
+  color: var(--color-text-muted);
   cursor: pointer;
 }
 
@@ -231,12 +249,12 @@ body {
 
 .modal-description {
   line-height: 1.8;
-  color: #4b5563;
+  color: var(--color-text-muted);
   font-size: 1.1rem;
 }
 
 .modal-meta {
-  color: #4b5563;
+  color: var(--color-text-muted);
   font-size: 1.05rem;
 }
 
@@ -247,8 +265,8 @@ body {
 }
 
 .genre-tag {
-  background-color: #f3f4f6;
-  border-radius: 0.4rem;
+  background-color: var(--color-tag);
+  border-radius: var(--radius-sm);
   padding: 0.5rem;
   font-size: 0.9rem;
 }
@@ -266,14 +284,14 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
-  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
   cursor: pointer;
 }
 
 .season-list span {
-  color: #4b5563;
+  color: var(--color-text-muted);
 }
 
 @media (max-width: 768px) {
@@ -316,7 +334,7 @@ body {
 
   .modal-description {
     font-size: 1rem;
-    color: #4b5563;
+    color: var(--color-text-muted);
     line-height: 1.8;
   }
 
