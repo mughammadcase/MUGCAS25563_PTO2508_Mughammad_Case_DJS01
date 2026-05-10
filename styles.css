@@ -85,4 +85,29 @@ body {
   background-color: white;
   border-radius: 1rem;
   padding: 1.5rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.modal img {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+}
+
+.modal p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.modal-close {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  float: right;
 }

@@ -1,6 +1,7 @@
 import { GenreService } from "../utils/genreService.js";
 import { DateUtils } from "../utils/dateUtils.js";
 import { createElement } from "../utils/createElement.js";
+import { createModal } from "./createModal.js";
 
 /**
  * Creates a podcast card element.
@@ -27,6 +28,11 @@ export function createPodcastCard(podcast) {
   content.append(title, genres, seasons, updated);
 
   card.append(image, content);
+
+  // Click event to open modal
+  card.addEventListener("click", () => {
+    createModal.open(podcast);
+  });
 
   return card;
 }
