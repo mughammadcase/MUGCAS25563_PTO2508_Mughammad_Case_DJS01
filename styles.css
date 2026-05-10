@@ -188,15 +188,18 @@ body {
 
 .modal-image {
   width: 100%;
+  max-width: 270px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 0.75rem;
   display: block;
-  object-fit: fill;
 }
 
 .modal-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  padding-right: 3rem;
 }
 
 .modal-body {
@@ -220,19 +223,20 @@ body {
 
 .modal-info h3,
 .modal-seasons-heading {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .modal-description {
-  line-height: 1.7;
+  line-height: 1.8;
   color: #4b5563;
+  font-size: 1.1rem;
 }
 
 .modal-meta {
   color: #4b5563;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 .genre-list {
@@ -260,9 +264,14 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 1.25rem;
+  padding: 1.5rem;
   border: 1px solid #e5e7eb;
   border-radius: 0.75rem;
+  background-color: white;
+}
+
+.season-list span {
+  color: #4b5563;
 }
 
 @media (max-width: 768px) {
@@ -275,9 +284,8 @@ body {
   }
 
   .modal-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    padding-right: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
   }
 
   .modal-top {
@@ -289,7 +297,7 @@ body {
 
   .modal-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
   }
 
   .modal-info {
@@ -299,12 +307,13 @@ body {
 
   .modal-info h3,
   .modal-seasons-heading {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
   }
 
   .modal-description {
+    font-size: 1rem;
     color: #4b5563;
     line-height: 1.8;
   }

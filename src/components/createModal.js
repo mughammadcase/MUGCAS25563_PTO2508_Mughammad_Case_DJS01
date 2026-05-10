@@ -29,26 +29,66 @@ export const createModal = {
       .join("");
 
     modalContent.innerHTML = `
+  <h2 class="modal-title">${podcast.title}</h2>
+
+  <div class="modal-body">
+    <div class="modal-top">
       <img 
         src="${podcast.image}" 
         alt="${podcast.title}"
         class="modal-image"
       >
 
-      <h2>${podcast.title}</h2>
+      <div class="modal-info">
+        <div>
+          <h3>Description</h3>
 
-      <p>${genreNames}</p>
+          <p class="modal-description">
+            ${podcast.description}
+          </p>
+        </div>
 
-      <p>${updatedDate}</p>
+        <div>
+          <h3>Genres</h3>
 
-      <p>${podcast.description}</p>
+          <div class="genre-list">
+            ${GenreService.getNames(podcast.genres)
+              .map(
+                (genre) => `
+                  <span class="genre-tag">${genre}</span>
+                `,
+              )
+              .join("")}
+          </div>
+        </div>
 
-      <h3>Seasons</h3>
+        <p class="modal-meta">
+          Last updated: ${updatedDate}
+        </p>
+      </div>
+    </div>
+
+    <div class="modal-seasons">
+      <h3 class="modal-seasons-heading">Seasons</h3>
 
       <ul class="season-list">
-        ${seasonsHTML}
+        ${seasonData.seasonDetails
+          .map(
+            (season) => `
+              <li>
+                <div>
+                  <strong>${season.title}</strong>
+                </div>
+
+                <span>${season.episodes} episodes</span>
+              </li>
+            `,
+          )
+          .join("")}
       </ul>
-    `;
+    </div>
+  </div>
+`;
 
     modalOverlay.showModal();
   },
