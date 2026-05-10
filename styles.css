@@ -45,31 +45,72 @@ body {
 }
 
 .podcast-grid {
+  display: grid;
   grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 0 1rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .podcast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 2rem;
+    padding: 0 2rem 2rem;
+  }
 }
 
 .podcast-card {
   background-color: white;
+  border: 1px solid #aeaeae;
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
 }
 
-.podcast-card img {
+.podcast-card-image {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  aspect-ratio: 16 / 10;
+  object-fit: fill;
   display: block;
 }
 
-.podcast-card h2 {
-  font-size: 1.1rem;
-  padding: 1rem 1rem 0.5rem;
+.podcast-card-content {
+  padding: 1rem;
 }
 
-.podcast-card p {
-  padding: 0 1rem 1rem;
-  color: #626262;
+.podcast-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.podcast-card-meta {
+  margin-bottom: 0.75rem;
+}
+
+.podcast-card-seasons {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.podcast-card-updated {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.genre-tag {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.875rem;
 }
 
 .modal-overlay {

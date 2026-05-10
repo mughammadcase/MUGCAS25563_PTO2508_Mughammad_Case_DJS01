@@ -39,7 +39,7 @@ export function createPodcastCard(podcast) {
 
   const genreList = createElement("div", "genre-list");
 
-  genreNames.forEach((name) => {
+  genreNames.forEach((genre) => {
     const genreTag = createElement("span", "genre-tag", genre);
     genreList.appendChild(genreTag);
   });
